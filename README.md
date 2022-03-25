@@ -1,4 +1,6 @@
-# Connect to Web
+# Developed with Django & Python
+
+by Song Song Y
 
 🗂 (Project) home
 
@@ -18,6 +20,5 @@
        
        ㄴ 🗂 price
  
-Developed with Django & Python
-by Song Song Y
+
 
