@@ -1,0 +1,14 @@
+{% extends './base.html'%}
+{% load static %}
+
+{% block menu %}    
+<div id="menu">
+    <a href="/price/"><b>Home</b></a>
+    <a href="/price/map">Map</a>
+    <a href="/price/predict">Prediction</a>
+    <a href="/price/contact">Contact</a>
+    <a href="/price/feedback">Feedback</a>
+</div>
+
+<img id="photo" src={% static 'price/images/main2.jpg' %} width="90%">
+{% endblock menu %}

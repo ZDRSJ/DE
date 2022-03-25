@@ -1,0 +1,40 @@
+{% extends 'price/base.html' %}
+{% load static %}
+
+
+
+{% block contact %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+    <div id="menu">
+        <a href="/price/">Home</a>
+        <a href="/price/map">Map</a>
+        <a href="/price/predict">Prediction</a>
+        <a href="/price/contact"><b>Contact</b></a>
+        <a href="/price/feedback">Feedback</a>
+    </div>
+
+    <div id="people" style="font-family: 'Caveat', cursive;">
+        <h1 id="dev">DEVELOPER</h1>
+        <h2 id="team">TEAM LINS</h2>
+        <p style="font-size: 25px; color: #808080;"><b style="color: black;">L</b>yuchangmin <b style="color: black;">I</b>mminjung <b style="color: black;">N</b>amdoin <b style="color: black;">S</b>ongsongy<br></p>
+        <p class="rinse">Rinse[사전적 의미 : 헹구어 부드럽고 광택이 있게 해줌]에서 영감을 얻었으며, <br>
+            명료하고 빛나는 결과를 도출해내는 팀이라는 의미입니다.</p>
+
+        <a href="/price/contact/doin"><img src={% static "/price/images/doin_pro_thin.png" %} width="150" style="margin-top: 20px; margin-right: 20px;"></a>
+        <a href="/price/contact/ryu"><img src={% static "/price/images/ryu_pro_thin.png" %} width="150" style="margin-top: 20px; margin-right: 20px;"></a>
+        <a href="/price/contact/song"><img src={% static "/price/images/song_pro_thin.png" %} width="150" style="margin-top: 20px; margin-right: 20px;"></a>
+        <a href="/price/contact/dona"><img src={% static "/price/images/dona_pro_thin2.png" %} width="150" style="margin-top: 20px; margin-right: 20px;"></a>
+        
+    </div>
+
+    <div id="people" style="font-family: 'Caveat', cursive;">
+        <h1 id="dev" style="margin-top: 70px;">DESIGNER</h1>
+        <h2 id="team">ZDRSJ</h2>
+        <a href="/price/contact/mimi"><img src={% static "/price/images/mimi_pro_thin.png" %} width="150" style="margin-left: 15px;"></a>
+    </div>
+{% endblock contact %}
+

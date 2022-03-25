@@ -1,0 +1,38 @@
+{% extends './contact_base.html' %}
+{% load static %}
+
+
+    {% block name %} 남도인 {% endblock name %}
+
+
+    <!-- IMAGE -->
+    {% block person_img %}<img src= {% static "price/images/doin_pro_thin.png" %} width=60% style="float: right; margin-right: 5%;">{% endblock person_img %}
+
+
+    <!-- INTRODUCE -->
+    {% block introduce %}
+    <h3>Data Analyst<br></h3>
+    <p>안녕하세요! <br>
+        LINS의 데이터 분석가 남도인입니다.<br>
+        세상의 다양한 가치와의 커뮤니케이션을 통해 제 세상의 선명도를 높이고자 합니다.<br>
+    </p>
+    {% endblock introduce %}
+
+    <!-- ADDRESS -->
+    {% block notion %} <a href="(채울예정)" target="_blank">{% endblock notion %}
+    {% block github %}<a href="https://github.com/DOINYNAM" target="_blank">{% endblock github %}
+    {% block instagram %}<a href="https://www.instagram.com/vvd01nvv/" target="_blank">{% endblock instagram %}
+    {% block mail %}<a href="mailto:dbshehdls11@gmail.com">{% endblock mail %}
+    {% block phone %}<a href="tel:010-3449-9031">{% endblock phone %}
+            
+    
+    <!-- DEVELOPER -->
+    {% block people %}
+    <a href="/price/contact/ryu"><img src={% static "price/images/ryu_pro_thin.png" %} width="75" style="margin-right: 10px;"></a>
+    <a href="/price/contact/song"><img src={% static "price/images/song_pro_thin.png" %} width="75" style="margin-right: 10px;"></a>
+    <a href="/price/contact/dona"><img src={% static "price/images/dona_pro_thin2.png" %} width="75" style="margin-right: 10px;"></a>
+    {% endblock people %}
+
+
+</body>
+</html>

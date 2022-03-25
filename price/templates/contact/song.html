@@ -1,0 +1,34 @@
+{% extends './contact_base.html' %}
+{% load static %}
+
+
+{% block name %} 송송이 {% endblock name %}
+
+    <!-- IMAGE -->
+    {% block person_img %}<img src={% static "price/images/song_pro_thin.png" %} width=60% style="float: right; margin-right: 5%;">{% endblock person_img %}
+
+
+    <!-- INTRODUCE -->
+    {% block introduce %}
+    <h3>Data Engineer<br></h3>
+    <p>"Fancy" 한 개발자 송송이 입니다.<br>
+        언제 어디서든 함께 의견을 나누며 능동적이고 효율적으로 협업합니다.<br>
+        Data Engineering & Backend 를 담당했습니다.<br>
+
+    </p>
+    {% endblock introduce %}
+
+    <!-- ADDRESS -->
+        {% block notion %}<a href="(수정예정)" target="_blank">{% endblock notion %}
+        {% block velog %}<a href="https://velog.io/@richeberry" target="_blank"><img src= {% static "price/images/velog_icon.jpg" %} width="30"></a>{% endblock velog %}
+        {% block github %}<a href="https://github.com/richeberry" target="_blank">{% endblock github %}
+        {% block instagram %}<a href="https://www.instagram.com/rycheberry/" target="_blank">{% endblock instagram %}
+        {% block mail %}<a href="mailto:richeberry@gmail.com">{% endblock mail %}
+        {% block phone %}<a href="tel:010-2277-6530">{% endblock phone %}
+
+    <!-- DEVELOPER -->
+    {% block people %}
+    <a href="/price/contact/doin"><img src={% static "price/images/doin_pro_thin.png" %} width="75" style="margin-right: 10px;"></a>
+    <a href="/price/contact/ryu"><img src={% static "price/images/ryu_pro_thin.png" %} width="75" style="margin-right: 10px;"></a>
+    <a href="/price/contact/dona"><img src={% static "price/images/dona_pro_thin2.png" %} width="75" style="margin-right: 10px;"></a>
+    {% endblock people %}

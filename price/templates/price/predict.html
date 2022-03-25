@@ -1,0 +1,20 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block predict %}
+    <div id="menu">
+        <a href="/price/">Home</a>
+        <a href="/price/map">Map</a>
+        <a href="/price/predict"><b>Prediction</b></a>
+        <a href="/price/contact">Contact</a>
+        <a href="/price/feedback">Feedback</a>
+    </div>
+{% endblock predict %}
+
+{% block predict_2 %}
+<img class="gif" src={% static "/price/images/zdrsjlogo.GIF" %}>
+{% endblock predict_2 %}
+
+
+</body>
+</html>

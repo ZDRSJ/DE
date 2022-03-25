@@ -1,0 +1,65 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href={% static "price/css/styles.css" %} media="screen" rel="stylesheet">
+    <title>개발자 소개 :{% block name %}{% endblock name %}</title>
+    <meta charset="utf-8">
+
+</head>
+<body> <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- HEADLINE -->
+    <img id="logo" src={% static "price/images/zdrsj.PNG" %} width="165px" height="58px">
+    <div id="menu">
+        <a href="/price/">Home</a>
+        <a href="/price/map">Map</a>
+        <a href="/price/predict">Prediction</a>
+        <a href="/price/contact"><b>Contact</b></a>
+        <a href="/price/feedback">Feedback</a>
+    </div>
+    
+
+    <div style="border: 1px solid white; float: left; width: 100%; padding:10px; margin-bottom: 50px;">
+        <div class="pic">
+            <!-- IMAGE -->
+            {% block person_img %}{% endblock person_img %}
+        </div>
+
+        <div class = "text-info" style="border: 1px solid white; float: left; width: 40%; padding:30px;">
+
+            <!-- INTRODUCE -->
+            <span class="line"></span><br>
+            {% block introduce %}{% endblock introduce %}
+
+            <!-- ADDRESS -->
+            {% block notion %}{% endblock notion %}<img src={% static "price/images/notion_icon.jpg" %} width="30"></a>
+            {% block tistory %}{% endblock tistory %}
+            {% block velog %}{% endblock velog %}
+            {% block github %}{% endblock github %}<img src= {% static "price/images/git_icon.jpg" %} width="30"></a>
+            {% block instagram %}{% endblock instagram %}<img src= {% static "price/images/ins_icon.jpg" %} width="30"></a>
+            {% block mail %}{% endblock mail %}<img src= {% static "price/images/email_icon.jpg" %} width="30"></a>
+            {% block phone %}{% endblock phone %}<img src= {% static "price/images/phone_icon.jpg" %} width="30"></a>
+        </div>
+    </div>
+            <!-- DEVELOPER -->
+    <div id="people" style="font-family: 'Caveat', cursive;">
+        <h1 style="font-size: 20px; margin-top: 150px;">OTHER DEVELOPER</h1>
+        <h2 id="team" style="font-size: 15px; margin-bottom: 20px;">TEAM LINS</h2>
+        {% block people %}{% endblock people %}
+    </div>
+    
+    <!-- DESIGNER -->
+    <div id="people" style="font-family: 'Caveat', cursive;">
+        <h1 id="dev" style="font-size: 20px; margin-top: 30px;">DESIGNER</h1>
+        <h2 id="team" style="font-size: 15px; margin-bottom: 20px;">ZDRSJ</h2>
+        <a href="/price/contact/mimi"><img src= {% static "price/images/mimi_pro_thin.png" %} width="75" style="margin-left: 15px;"></a>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'Cafe24SsurroundAir';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#logo {
+    margin-top: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#menu {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+
+#menu a {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #58595b;
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+#photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#people {
+    text-align: center;
+}
+
+
+#team {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+
+.line {
+    display: inline-block;
+    /* vertical-align: right; */
+    width: 90%;
+    height: 5px;
+    background-color: black;
+}
+
+
+.rinse {
+    font-family: 'GowunDodum-Regular';
+}
+
+
+#map-text {
+    color: #808080;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+.gif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+/* 반응형(퍙소) */
+.pic {
+    border: 1px solid white;
+    float: left;
+    height: 50%;
+    width: 50%;
+    padding:10px;
+}
+
+
+.text-info {
+    font-family: 'GowunDodum-Regular';
+}
+
+
+.text-info h3 {
+    font-family: 'Caveat', cursive;
+    font-size: 30px;
+}
+
+
+.text-info p {
+    font-size: 16px;
+}
+
+
+.btn btn-outline-dark{
+    font-size: 20px;
+    width: 25%;
+}
+
+
+#buttons {
+    text-align: center;
+}
+
+
+/* 반응형(작아졌을 때) */
+@media screen and (max-width: 855px) {
+    /* 점검용
+    body {
+        background-color: lightgreen;
+    } */
+
+    .text-info {
+        font-size: 12px;
+        padding: 0px;
+        width: 20%;
+    }
+
+    .text-info h3 {
+        font-size: 20px;
+    }
+
+    .pic {
+        border: 1px solid white;
+        float: left;
+        height: 50%;
+        width: 40%;
+        padding:10px;
+    }
+
+    .text-info p {
+        font-size: 15px;
+    }
+
+    .btn btn-outline-dark{
+        font-size: 10px;
+    }
+
+    .profile-image{
+        margin-top: 20px;
+    }
+}

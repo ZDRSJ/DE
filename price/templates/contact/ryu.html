@@ -1,0 +1,38 @@
+{% extends './contact_base.html' %}
+{% load static %}
+
+    {% block name %} 류창민 {% endblock name %}
+
+
+    <!-- IMAGE -->
+    {% block person_img %}<img src= {% static "price/images/ryu_pro_thin.png" %} width=60% style="float: right; margin-right: 5%;">{% endblock person_img %}
+        
+
+    <div class = "text-info" style="border: 1px solid white; float: left; width: 40%; padding:30px;">
+        <!-- INTRODUCE -->
+        {% block introduce %}
+        <h3>Data Engineer<br></h3>
+        실패로 인해 성장합니다.<br>
+        도전에 실패하더라도 좌절하지 않고, 오기가 생겨 다음에 성공할 수 있도록 노력하는 편입니다.<br>
+        모든 것은 다 경험이라 생각합니다.
+        </p>
+        {% endblock introduce %}
+
+    <!-- ADDRESS -->
+    {% block notion %}<a href="(수정예정)" target="_blank">{% endblock notion %}
+    {% block tistory %}<a href="https://ckd12394.tistory.com/" target="_blank"><img src={% static "price/images/t_icon.jpg" %} width="30"></a>{% endblock tistory %}
+    {% block github %}<a href="https://github.com/ryucm" target="_blank">{% endblock github %}
+    {% block instagram %}<a href="https://www.instagram.com/cangmin1384/" target="_blank">{% endblock instagram %}
+    {% block mail %}<a href="mailto:dbse7en@naver.com">{% endblock mail %}
+    {% block phone %}<a href="tel:010-2552-4364">{% endblock phone %}
+
+
+    <!-- DEVELOPER -->
+    {% block people %}
+    <a href="/price/contact/doin"><img src={% static "price/images/doin_pro_thin.png" %} width="75" style="margin-right: 10px;"></a>
+    <a href="/price/contact/song"><img src={% static "price/images/song_pro_thin.png" %} width="75" style="margin-right: 10px;"></a>
+    <a href="/price/contact/dona"><img src={% static "price/images/dona_pro_thin2.png" %} width="75" style="margin-right: 10px;"></a>
+    {% endblock people %}
+
+
+

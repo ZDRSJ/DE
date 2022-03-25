@@ -1,0 +1,52 @@
+{% load static %}
+
+<!-- common -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link href={% static 'price/css/styles.css' %} rel="stylesheet">
+    <title>ZDRSJ, 고양시 집값 예측 서비스</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    
+    <img id="logo" src={% static 'price/images/zdrsj.PNG' %} width="165px" height="58px">
+<div>
+    {% block menu %}
+    {% endblock menu %}
+</div>
+
+<!-- map.html-->
+<div>
+    {% block map %}
+    {% endblock map %}
+</div>
+
+<!-- contact.html -->
+<div>
+    {% block contact %}
+    {% endblock contact %}
+</div>
+
+<!-- predict.html -->
+<div>
+    {% block predict %}
+    {% endblock predict %}
+</div>
+
+<div>
+    {% block predict_2 %}
+    {% endblock predict_2 %}
+</div>
+
+<!-- feedback.html -->
+<div>
+    {% block feedback %}
+    {% endblock feedback %}
+</div>
+
+<div>{% block feedback_img %}{% endblock feedback_img %}</div>
+
+</body>
+</html>
+

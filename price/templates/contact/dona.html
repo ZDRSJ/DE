@@ -1,0 +1,38 @@
+{% extends './contact_base.html' %}
+{% load static %}
+
+
+    {% block name %} 임민정 {% endblock name %}
+
+
+    <!-- IMAGE -->
+    {% block person_img %}<img src= {% static "price/images/dona_pro_thin2.png" %} width=60% style="float: right; margin-right: 5%;">{% endblock person_img %}
+
+
+    <!-- INTRODUCE -->
+    {% block introduce %}
+    <h3>Data Analyst<br></h3>
+    <p>안녕하세요! LINS의 I(임)민정입니다.<br>
+        상상했던 것들이 구현 될 때의 쾌감과 희열을 느끼고, 세상을 변화시키는 것에 취한 주니어 분석가입니다.<br>
+        Web publishing & Data Analysis를 담당했습니다.<br>
+    </p>
+    
+    {% endblock introduce %}
+
+    <!-- ADDRESS -->
+    {% block notion %}<a href="https://imdona.notion.site/imdona/Hello-Dona-4c374b9978cf4bb08d7b71ee594fb44b" target="_blank">{% endblock notion %}
+    {% block tistory %}<a href="https://imdona.tistory.com/" target="_blank"><img src={% static "price/images/t_icon.jpg" %} width="30"></a>{% endblock tistory %}
+    {% block github %}<a href="https://github.com/imdona" target="_blank">{% endblock github %}
+    {% block instagram %}<a href="https://www.instagram.com/man.du____/" target="_blank">{% endblock instagram %}
+    {% block mail %}<a href="mailto:iminj1995@gmail.com">{% endblock mail %}
+    {% block phone %}<a href="tel:010-7919-1062">{% endblock phone %}
+
+
+    <!-- DEVELOPER -->
+    {% block people %}
+    <a href="/price/contact/doin"><img src={% static "price/images/doin_pro_thin.png" %} width="75" style="margin-right: 10px;"></a>
+    <a href="/price/contact/ryu"><img src={% static "price/images/ryu_pro_thin.png" %} width="75" style="margin-right: 10px;"></a>
+    <a href="/price/contact/song"><img src={% static "price/images/song_pro_thin.png" %} width="75" style="margin-right: 10px;"></a>
+    {% endblock people %}
+       
+
