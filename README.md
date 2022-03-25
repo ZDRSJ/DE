@@ -2,5 +2,6 @@
 
 ## Team LINS
 
+Developed with Django & Python
+by Song Song Y
 
-web framework &amp; Backend
