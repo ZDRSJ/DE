@@ -3,6 +3,7 @@
 🗂 (Project) home
 
  ㄴ 🗂 (App) home
+ 
     ㄴ 🗂 settings.py
  
  ㄴ 🗂 (App) price
