@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href={% static 'price/css/styles.css' %} rel="stylesheet">
+    <title>ZDRSJ, 고양시 집값 예측 서비스</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href={% static "/price/images/zdrsj.ico" %}>
+</head>
+
+<body>
+    <img id="logo" src={% static 'price/images/zdrsj.PNG' %} width="165px" height="58px">
+    <div id="menu">
+        <a href="/price/">Home</a>
+        <a href="/price/map">Map</a>
+        <a href="/price/predict"><b>Prediction</b></a>
+        <a href="/price/contact">Contact</a>
+        <a href="/price/feedback">Feedback</a>
+    </div>
+
+
+<img class="gif" src={% static "/price/images/zdrsjlogo.GIF" %}>
+
+
+<h2 id="map-text">
+
+
+    <i>고양시 {{ dong }} 에서 {{ year }}에 {{ area }}㎡인 <br> 아파트의 가격은 {{ scoreval }}으로 예측됩니다.</i></h2>
+
+
+</body>
+</html>
