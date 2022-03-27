@@ -16,3 +16,12 @@ class Developer(models.Model):
 
     def __str__(self):
         return self.name
+
+class Predict(models.Model):
+    goo = models.CharField(max_length=50)
+    dong = models.CharField(max_length=50)
+    year = models.IntegerField()
+    area = models.IntegerField()
+
+    def __str__(self):
+        return self.goo

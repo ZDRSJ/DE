@@ -1,6 +1,9 @@
 from django.contrib import admin
 from django.urls import path
 from . import views
+# import lightgbm
+# from lightgbm import lgbmclassifier
+from price import views as price_views
 
 urlpatterns = [
     path('', views.index),
@@ -15,5 +18,7 @@ urlpatterns = [
     path('contact/song/', views.song),
     path('contact/mimi/', views.mimi),
 
-    path('developer/', views.engineer_detail)
+    path('predict/result', views.result, name= 'result'),
+    path('predict/', views.predict, name='predict'),
+    # path('developer/', views.engineer_detail)
 ]

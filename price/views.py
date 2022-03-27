@@ -50,15 +50,10 @@ def mimi(request):
 
 
 
-
-# def predict(request):
-#     context = {'a':"ㅎㅡㄱ흐ㄱ흐긓ㄱ흑흑흑"}
-#     return render(request, 'price/predict.html', context)
-
 def make_bus_dict(dong):
     '''버스 노선 사전에서 동(key)를 넣으면 노선수(value)를 리턴하는 함수'''
     # 버스 노선 파일 불러오기
-    bus_line_data = pd.read_excel("bus_line_data.xlsx")
+    bus_line_data = pd.read_excel("/Users/ryuchangmin/Desktop/DE/price/bus_line_data.xlsx")
 
     # 각 컬럼별 값들 리스트로 만들기
     adr_dong = list(bus_line_data['adr_dong'])
@@ -72,22 +67,59 @@ def make_bus_dict(dong):
 
     return bus_dict[dong]
 
-reloadModel = joblib.load('./models/final_model.pkl')
+# def predict(request):
+#     context = {'a':"ㅎㅡㄱ흐ㄱ흐긓ㄱ흑흑흑"}
+#     return render(request, 'price/predict.html', context)
+
+
 
 def result(request):
     print(request)
+    reloadModel = joblib.load('./models/final_model.pkl')
     if request.method == 'POST':
+        temp = {'가좌동' : 0,
+    '고양동' : 0,
+    '관산동' : 0,
+    '대화동' : 0,
+    '덕은동' : 0,
+    '덕이동' : 0,
+    '도내동' : 0,
+    '동산동' : 0,
+    '마두동' : 0,
+    '백석동' : 0,
+    '사리현동' : 0,
+    '삼송동' : 0,
+    '성사동' : 0,
+    '성석동' : 0,
+    '식사동' : 0,
+    '신원동' : 0,
+    '원흥동' : 0,
+    '일산동' : 0,
+    '장항동' : 0,
+    '주교동' : 0,
+    '주엽동' : 0,
+    '중산동' : 0,
+    '지축동' : 0,
+    '탄현동' : 0,
+    '토당동' : 0,
+    '풍동' : 0,
+    '행신동' : 0,
+    '향동동' : 0,
+    '화정동' : 0}
         dong = str(request.POST.get('dong'))
-        temp['year'] = request.POST.get('year')
-        temp['area'] = request.POST.get('area')
+        # temp['dong'] = str(request.POST.get('dong'))
+        temp['year'] = int(request.POST.get('year'))
+        temp['area'] = int(request.POST.get('area'))
+        #입력 받은 동의 값을 1로 변환
+        temp[dong] = 1
         
-    
-    context = {'dong':dong, 'year':temp['year'], 'area':temp['area']}
-
+        temp['data_bus'] = make_bus_dict(dong)
+        
     data_f = pd.DataFrame([temp])
     scoreval = reloadModel.predict(data_f)
-    context = {'scoreval':scoreval}
+    context = {'scoreval':int(scoreval)}
     return render(request, 'price/result.html', context)
+    
 
 
 

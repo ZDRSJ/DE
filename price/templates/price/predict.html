@@ -1,7 +1,16 @@
-{% extends './base.html' %}
 {% load static %}
+<!-- common -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link href={% static 'price/css/styles.css' %} rel="stylesheet">
+    <title>ZDRSJ, 고양시 집값 예측 서비스</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href={% static "/price/images/zdrsj.ico" %}>
+</head>
 
-{% block predict %}
+<body>
+    <img id="logo" src={% static 'price/images/zdrsj.PNG' %} width="165px" height="58px">
     <div id="menu">
         <a href="/price/">Home</a>
         <a href="/price/map">Map</a>
@@ -9,12 +18,70 @@
         <a href="/price/contact">Contact</a>
         <a href="/price/feedback">Feedback</a>
     </div>
-{% endblock predict %}
 
-{% block predict_2 %}
+
 <img class="gif" src={% static "/price/images/zdrsjlogo.GIF" %}>
-{% endblock predict_2 %}
 
 
+<h4 id="predict-text"><i>Apartment Price Forecasting Service<br>
+    (예: 고양시 덕양구 덕은동에서 2032년에 85㎡인 아파트의 가격은 얼마인지)</i></h4>
+
+<form action="result" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+<div id="combo">
+    
+    <select onchange="categoryChange(this)">
+        <option>구를 선택해주세요</option>
+        <option value="a">덕양구</option>
+        <option value="b">일산동구</option>
+        <option value="c">일산서구</option>
+    </select>
+
+    <br><br>
+    <select name="dong" id="goo">
+    <option>동을 선택해주세요</option>
+    </select>
+
+</div>
+
+<br>
+
+<div id="input-text">
+    <input name="year" type="text" Placeholder="년도 (예: 2032)">
+    <br><br>
+    <input name="area" type="text" Placeholder="전용면적 (예: 85)">
+</div>
+
+<br>
+<div id="submit">
+    <input type="submit" value="Submit">
+</div>
+
+
+
+<script>
+    function categoryChange(e) {
+    var goo_a = ['고양동', '관산동', '덕은동', '도내동', '동산동', '삼송동', '성사동',  '신원동', '원흥동', '주교동', '지축동', '토당동', '행신동', '향동동', '화정동'];
+    var goo_b = ['마두동', '백석동', '사리현동', '식사동', '장항동', '중산동', '풍동'];
+    var goo_c = ['가좌동', '대화동', '덕이동', '일산동', '주엽동', '탄현동'];
+    var target = document.getElementById("goo");
+
+    if(e.value == "a") var d = goo_a;
+    else if(e.value == "b") var d = goo_b;
+    else if(e.value == "c") var d = goo_c;
+
+    target.options.length = 0;
+
+    for (x in d) {
+        var opt = document.createElement("option");
+        opt.value = d[x];
+        opt.innerHTML = d[x];
+        target.appendChild(opt);
+    }
+}
+</script>
+
+</form>
 </body>
 </html>

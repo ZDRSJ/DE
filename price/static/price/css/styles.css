@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'Cafe24SsurroundAir';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
@@ -15,7 +16,7 @@
 
 
 #logo {
-    margin-top: 80px;
+    margin-top: 70px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -77,12 +78,19 @@
     font-size: 15px;
 }
 
+#predict-text {
+    color: #808080;
+    text-align: center;
+    font-size: 15px;
+    font-family: 'GowunDodum-Regular';
+}
+
 
 .gif {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    width: 25%;
 }
 
 /* 반응형(퍙소) */
@@ -158,4 +166,53 @@
     .profile-image{
         margin-top: 20px;
     }
+}
+
+
+/* 콤보박스 */
+select {
+    width: 200px;
+    padding: .8em .5em;
+    border: 1px solid #999;
+    font-family: inherit;
+    background: url('../images/arrow.jpg') no-repeat 95% 50%;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+
+#combo {
+    text-align: center;
+}
+
+
+#submit {
+    text-align: center;
+}
+
+
+input[type=submit] {
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+#input-text {
+    text-align: center;
+}
+
+input[type=text] {
+    width: 185px;
+    padding: .8em .5em;
+    border: 1px solid #999;
 }
