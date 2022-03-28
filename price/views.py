@@ -53,7 +53,7 @@ def mimi(request):
 def make_bus_dict(dong):
     '''버스 노선 사전에서 동(key)를 넣으면 노선수(value)를 리턴하는 함수'''
     # 버스 노선 파일 불러오기
-    bus_line_data = pd.read_excel("/Users/ryuchangmin/Desktop/DE/price/bus_line_data.xlsx")
+    bus_line_data = pd.read_excel("price/bus_line_data.xlsx")
 
     # 각 컬럼별 값들 리스트로 만들기
     adr_dong = list(bus_line_data['adr_dong'])
