@@ -15,7 +15,11 @@
  ㄴ 🗂 (App) home
  
     ㄴ 🗂 settings.py
+    
+ ㄴ 🗂 model
  
+    ㄴ 🗳 model.pkl
+   
  ㄴ 🗂 (App) price
  
     ㄴ 🗂 static
