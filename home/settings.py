@@ -122,12 +122,3 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# AWS_ACCESS_KEY_ID = 'AKIAWBI4ODNALDTNQHP3'
-# AWS_SECRET_ACCESS_KEY = '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'
-# AWS_STORAGE_BUCKET_NAME = 'zdrsj'
-
-# AWS_S3_REGION_NAME = 'ap-northeast-2'   # 지역명 (region) 
-# AWS_S3_CUSTOM_DOMAIN = '%s.s3.%s.amazonaws.com' % (AWS_STORAGE_BUCKET_NAME, AWS_S3_REGION_NAME)
-
-

@@ -23,6 +23,9 @@ def index(request):
 def map(request):
     return render(request, 'price/map.html')
 
+def dashboard(request):
+    return render(request, 'price/dashboard.html')
+
 def predict(request):
     return render(request, 'price/predict.html')
 
@@ -67,9 +70,7 @@ def make_bus_dict(dong):
 
     return bus_dict[dong]
 
-# def predict(request):
-#     context = {'a':"ㅎㅡㄱ흐ㄱ흐긓ㄱ흑흑흑"}
-#     return render(request, 'price/predict.html', context)
+
 
 
 
@@ -106,18 +107,20 @@ def result(request):
     '행신동' : 0,
     '향동동' : 0,
     '화정동' : 0}
+        gu = str(request.POST.get('gu'))
         dong = str(request.POST.get('dong'))
-        # temp['dong'] = str(request.POST.get('dong'))
         temp['year'] = int(request.POST.get('year'))
         temp['area'] = int(request.POST.get('area'))
         #입력 받은 동의 값을 1로 변환
         temp[dong] = 1
         
         temp['data_bus'] = make_bus_dict(dong)
+
         
     data_f = pd.DataFrame([temp])
     scoreval = reloadModel.predict(data_f)
-    context = {'scoreval':int(scoreval)}
+    context = {'scoreval':int(scoreval), 'gu':gu, 'dong':dong, 'year':temp['year'],
+                'area':temp['area']}
     return render(request, 'price/result.html', context)
     
 

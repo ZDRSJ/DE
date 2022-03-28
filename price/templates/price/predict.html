@@ -14,6 +14,7 @@
     <div id="menu">
         <a href="/price/">Home</a>
         <a href="/price/map">Map</a>
+        <a href="/price/dashboard">dashboard</a>
         <a href="/price/predict"><b>Prediction</b></a>
         <a href="/price/contact">Contact</a>
         <a href="/price/feedback">Feedback</a>
@@ -31,11 +32,11 @@
 
 <div id="combo">
     
-    <select onchange="categoryChange(this)">
+    <select name="gu" onchange="categoryChange(this)">
         <option>구를 선택해주세요</option>
-        <option value="a">덕양구</option>
-        <option value="b">일산동구</option>
-        <option value="c">일산서구</option>
+        <option value="덕양구">덕양구</option>
+        <option value="일산동구">일산동구</option>
+        <option value="일산서구">일산서구</option>
     </select>
 
     <br><br>
@@ -67,9 +68,9 @@
     var goo_c = ['가좌동', '대화동', '덕이동', '일산동', '주엽동', '탄현동'];
     var target = document.getElementById("goo");
 
-    if(e.value == "a") var d = goo_a;
-    else if(e.value == "b") var d = goo_b;
-    else if(e.value == "c") var d = goo_c;
+    if(e.value == "덕양구") var d = goo_a;
+    else if(e.value == "일산동구") var d = goo_b;
+    else if(e.value == "일산서구") var d = goo_c;
 
     target.options.length = 0;
 

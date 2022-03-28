@@ -8,9 +8,11 @@ from price import views as price_views
 urlpatterns = [
     path('', views.index),
     path('map/', views.map),
+    path('dashboard/',views.dashboard),
     path('predict/', views.predict),
     path('contact/', views.contact),
     path('feedback/', views.feedback),
+
 
     path('contact/doin/', views.doin),
     path('contact/dona/', views.dona),

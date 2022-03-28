@@ -13,6 +13,7 @@
     <div id="menu">
         <a href="/price/">Home</a>
         <a href="/price/map">Map</a>
+        <a href="/price/dashboard">dashboard</a>
         <a href="/price/predict"><b>Prediction</b></a>
         <a href="/price/contact">Contact</a>
         <a href="/price/feedback">Feedback</a>
@@ -23,10 +24,9 @@
 
 
 <h2 id="map-text">
-    {{a}}
 
-    <i>고양시 {{ predict.goo }} {{ predict.dong }}에서 {{ predict.year }}에 {{ predict.area }}㎡인 <br> 아파트의 가격은 {{ scoreval }}으로 예측됩니다.</i></h2>
-
+    <i>고양시 {{ gu }} {{ dong }}에서 {{ year }}년에 {{ area }}㎡인 <br> 아파트의  예상 가격은 {{ scoreval }}00000원으로 예측됩니다.<br>
+    </i></h2>
 
 </body>
 </html>
