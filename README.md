@@ -35,7 +35,8 @@
        ㄴ 🗂 contact
        
        ㄴ 🗂 price
- 
+       
+ ㄴ 🗳 manage.py
 
 
 
