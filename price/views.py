@@ -7,6 +7,7 @@ from price.models import Developer
 from price.models import Predict
 
 import joblib
+import boto3
 import pandas as pd
 import lightgbm
 from lightgbm import LGBMClassifier
@@ -115,17 +116,19 @@ def result(request):
         temp[dong] = 1
         
         temp['data_bus'] = make_bus_dict(dong)
-
+    
         
     data_f = pd.DataFrame([temp])
     scoreval = reloadModel.predict(data_f)
     context = {'scoreval':int(scoreval), 'gu':gu, 'dong':dong, 'year':temp['year'],
                 'area':temp['area']}
+
+
     return render(request, 'price/result.html', context)
     
 
 
-
-
-
+    # s3 = boto3.resource('s3')            
+    # bucket_name = "zdrsj"
+    # bucket = s3.Bucket(bucket_name)
 
