@@ -1,4 +1,9 @@
-# Developed with Django & Python
+# DE
+
+⚙️ Stack & Tool used
+
+- Django & python & AWS S3 & AWS EC2
+- visual studio code
 
 
 
